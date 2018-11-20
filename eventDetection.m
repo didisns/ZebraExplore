@@ -292,6 +292,13 @@ if dataSource < 9
                 % continue the old DS
                 firstI=nextI;
                  if i == lds
+                      % NOTE, November 2018 by Didi: the next lines to close the DS when we have
+                      % reached the end of the trace was commented out by
+                      % Gimmi. I re-added it, since I prefer to have the
+                      % vectors downstates.fromT and downstates.toT of the
+                      % same size..If anyone prefers to comment it out
+                      % again, let me know
+                      
                       % we have reached the end of the track. close the DS
                       endTime = handles.timeSPG (firstI);
                       handles.downstates.toT (nds) = endTime;
